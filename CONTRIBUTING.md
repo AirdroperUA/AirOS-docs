@@ -1,7 +1,7 @@
 # Context
 This file refers to the process of contributing to this documentation repository.
 
-> 💡 For contributing to BlueOS itself please see [the source code repository](https://github.com/bluerobotics/BlueOS).
+> 💡 For contributing to AirOS itself please see [the source code repository](https://github.com/airdroperua/AirOS).
 
 ## Repository Structure
 1. Each branch covers some form of release of the software
@@ -30,8 +30,8 @@ This file refers to the process of contributing to this documentation repository
 While we strive to have comprehensive and clear documentation, it is not always obvious to developers which features need additional explanation. If there's a feature you're struggling to make sense of then others likely are too, so please let us know about it!
 
 After searching for existing information, the recommended approaches are to:
-1. Ask questions on [the community forum](https://discuss.bluerobotics.com/c/bluerobotics-software), for clarification of features you would like a better explanation of
-1. [Create an Issue](https://github.com/bluerobotics/BlueOS-docs/issues) in this repository, with notes of your existing understanding, what you're unsure about, and/or any links and references that seem relevant
+1. Ask questions on [the community forum](https://discuss.airdroper.org/c/airdroperua-software), for clarification of features you would like a better explanation of
+1. [Create an Issue](https://github.com/airdroperua/AirOS-docs/issues) in this repository, with notes of your existing understanding, what you're unsure about, and/or any links and references that seem relevant
 
 ### Adding to the Documentation
 > 💡 Contributions should typically be made from a unique branch in an external fork.
@@ -39,7 +39,7 @@ After searching for existing information, the recommended approaches are to:
 Specific processes are covered below, but the general process is:
 
 0. [Create a GitHub account](https://github.com/signup)
-1. [Fork this repository](https://github.com/bluerobotics/BlueOS-docs/fork)
+1. [Fork this repository](https://github.com/airdroperua/AirOS-docs/fork)
 1. [Make a new branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch-using-the-branch-dropdown) for your changes
 1. Commit your changes to your branch
     - Small changes can just be made through GitHub's standard web interface
@@ -51,11 +51,11 @@ Specific processes are covered below, but the general process is:
 
 ## Content Improvements
 ### Documenting a New/Upcoming Feature
-> 💡 These can often be found by [searching the software repository](https://github.com/bluerobotics/BlueOS/issues?q=is%3Apull+label%3Adocs-needed) for pull requests with the `docs-needed` label.
+> 💡 These can often be found by [searching the software repository](https://github.com/airdroperua/AirOS/issues?q=is%3Apull+label%3Adocs-needed) for pull requests with the `docs-needed` label.
 
 0. Ensure your fork's `latest` branch is up to date with this repository
 1. Branch out from your `latest` branch into a unique branch, ideally with a short name that reflects its purpose
-1. Submit a Draft pull request with your changes, and include "Documents bluerobotics/BlueOS#{PULL-REQUEST}" in the description
+1. Submit a Draft pull request with your changes, and include "Documents airdroperua/AirOS#{PULL-REQUEST}" in the description
     - `{PULL-REQUEST}` is the ID number of the software feature pull request covered by the proposed documentation
     - If your pull request covers multiple features, you can specify "Documents:" followed by a list of software feature pull request links
 1. [Ensure your changes can be built](#testing), and (if relevant) clean up your commit history with an interactive rebase
@@ -63,7 +63,7 @@ Specific processes are covered below, but the general process is:
 1. Once your pull request is merged, update the relevant software repository pull request(s) by changing the `docs-needed` label to `docs-complete` or `docs-minimal` as appropriate, or commenting the new documentation state if you don't have edit access to the repository
 
 ### Improving/Adding Documentation for Released Features
-> 💡 Relevant features can typically be found by looking through the public documentation for features with minimal information, and/or [searching this repository](https://github.com/bluerobotics/BlueOS-docs/issues?q=is%3Aissue+is%3Aopen+label%3Acontent) for issues with the `content` label, or [searching the software repository](https://github.com/bluerobotics/BlueOS/issues?q=is%3Apull+is%3Aclosed+label%3Adocs-minimal) for pull requests with the `docs-minimal` label.
+> 💡 Relevant features can typically be found by looking through the public documentation for features with minimal information, and/or [searching this repository](https://github.com/airdroperua/AirOS-docs/issues?q=is%3Aissue+is%3Aopen+label%3Acontent) for issues with the `content` label, or [searching the software repository](https://github.com/airdroperua/AirOS/issues?q=is%3Apull+is%3Aclosed+label%3Adocs-minimal) for pull requests with the `docs-minimal` label.
 
 Documentation for existing features should generally first be [added to the `latest` branch](#documenting-a-newupcoming-feature), before optionally being backported to the `beta` and/or any relevant version branches, usually via [`git cherry-pick`](https://git-scm.com/docs/git-cherry-pick).
 
@@ -71,7 +71,7 @@ If your changes were requested in an Issue, make sure to include "Resolves #{ISS
 
 ## Infrastructure Improvements
 ### Modifying the Documentation Structure
-> 💡 Requested features/fixes can be found by [searching this repository](https://github.com/bluerobotics/BlueOS-docs/issues?q=is%3Aissue+is%3Aopen+label%3Ainfrastructure) for issues with the `infrastructure` label.
+> 💡 Requested features/fixes can be found by [searching this repository](https://github.com/airdroperua/AirOS-docs/issues?q=is%3Aissue+is%3Aopen+label%3Ainfrastructure) for issues with the `infrastructure` label.
 
 > ⚠️ As the infrastructure can affect all aspects of the public documentation, it is necessary to ensure that infrastructure changes maintain compatibility with all the content branches, or (if absolutely necessary) update all the content branches with the relevant changes to work with the modified infrastructure.
 
@@ -86,7 +86,7 @@ If your changes were requested in an Issue, make sure to include "Resolves #{ISS
 ### Modifying the Theme
 The theme is maintained in an external repository, and included in this one as a submodule. Zola supports overriding theme components via the "templates" folder, which can be useful for initial testing and any specifics required for the software being documented, but if you want to update the upstream theme used:
 
-1. Fork and branch out from [the theme repository](https://github.com/bluerobotics/bluetheme), and make your desired changes in a Draft pull request
+1. Fork and branch out from [the theme repository](https://github.com/airdroperua/bluetheme), and make your desired changes in a Draft pull request
 1. Fork and branch out from the `latest` branch of this repository
 1. Add your forked theme as a submodule to the "theme" folder of your branch, with a unique name
 1. Change the `theme` variable of `config.toml` to match your theme name
@@ -107,12 +107,12 @@ If you frequently contribute to the documentation, you may wish to set things up
 
 0. [Install Zola](https://www.getzola.org/documentation/getting-started/installation/)
 1. Clone the content branch you're making changes in
-    - e.g. `git clone -b BRANCH https://USER-NAME@github.com/USER-NAME/BlueOS-docs BlueOS-docs-modified`, where
+    - e.g. `git clone -b BRANCH https://USER-NAME@github.com/USER-NAME/AirOS-docs AirOS-docs-modified`, where
         - `USER-NAME` is your GitHub username
         - `BRANCH` is the name of the content branch you're planning to change
 1. Enter the cloned repository and initialise the submodules, to get the theme
    ```sh
-   cd BlueOS-docs-modified
+   cd AirOS-docs-modified
    git submodule update --init --recursive
    ```
 1. `zola serve` from the base folder of the repository (not inside the "content" folder) to build, and preview your changes

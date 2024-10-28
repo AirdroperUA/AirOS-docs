@@ -12,7 +12,7 @@ toc = true
 top = false
 +++
 
-ArduSub is designed to work with brushless and brushed Electronic Speed Controllers (ESCs) to control motors and [thrusters](../thrusters/). Different motor types require different ESCs, so the ESCs must match the motor type they are being used to control.
+ArduPlane, ArduRover, ArduSub is designed to work with brushless and brushed Electronic Speed Controllers (ESCs) to control motors and [thrusters](../thrusters/). Different motor types require different ESCs, so the ESCs must match the motor type they are being used to control.
 
 ArduPilot does not support controlling both brushed and brushless motors at the same time.
 
@@ -30,10 +30,10 @@ The minimum requirements for an ESC of either type are:
 
 The following brushless ESCs are supported for use with ArduSub:
 
-* [Blue Robotics Basic ESC](https://bluerobotics.com/store/thrusters/speed-controllers/besc30-r3/)
-* [Blue Robotics Basic ESC 500](https://bluerobotics.com/store/thrusters/speed-controllers/besc500/)
+* [Airdroper Basic ESC](https://airdroper.org/store/thrusters/speed-controllers/besc30-r3/)
+* [Airdroper Basic ESC 500](https://airdroper.org/store/thrusters/speed-controllers/besc500/)
 
-There is a comparison of properties [in the Blue Robotics Technical Reference](https://bluerobotics.com/learn/technical-reference/#speed-controllers-escs).
+There is a comparison of properties [in the Airdroper Technical Reference](https://airdroper.org/learn/technical-reference/#speed-controllers-escs).
 
 ## Brushed ESCs
 

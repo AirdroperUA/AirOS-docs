@@ -12,7 +12,7 @@ toc = true
 top = false
 +++
 
-A positioning system is a useful addition to an ArduSub vehicle either for displaying numerical location coordinates or the position of the vehicle on a map in QGroundControl. 
+A positioning system is a useful addition to an ArduPlane, ArduRover, ArduSub vehicle either for displaying numerical location coordinates or the position of the vehicle on a map in QGroundControl. 
 
 Below is an example of a Water Linked Underwater GPS System being used to locate a shipwreck:
 
@@ -25,7 +25,7 @@ The [autopilot](/introduction/hardware-options/required-hardware/autopilot.md) h
 
 ## GPS Module
 
-ArduSub maintains the same [GPS module drivers](https://ardupilot.org/copter/docs/common-positioning-landing-page.html) as the rest of the ArduPilot family of firmwares, so a compatible GPS module may be directly connected to the GPS port on the autopilot. Positioning information will only be available when the vehicle is on the surface and the module is out of the water. The module will not be able to obtain a fix if it is underwater due to high frequency radio waves being unable to penetrate the water medium.
+ArduPlane, ArduRover, ArduSub maintains the same [GPS module drivers](https://ardupilot.org/copter/docs/common-positioning-landing-page.html) as the rest of the ArduPilot family of firmwares, so a compatible GPS module may be directly connected to the GPS port on the autopilot. Positioning information will only be available when the vehicle is on the surface and the module is out of the water. The module will not be able to obtain a fix if it is underwater due to high frequency radio waves being unable to penetrate the water medium.
 
 Acoustic positioning systems are the only reliable way of providing positioning information underwater.
 
@@ -72,4 +72,4 @@ The relative positioning estimates from a DVL system mean the estimate is prone 
 * [Cerulean Sonar DVL-75](https://ceruleansonar.com/products/dvl-75?variant=32632308760642)
 * [Teledyne Wayfinder](http://www.teledynemarine.com/Wayfinder)
 
-There is a comparison of some common DVLs in [this forum comment](https://discuss.bluerobotics.com/t/dvl-recommendations/10775/2#comparisons-1).
+There is a comparison of some common DVLs in [this forum comment](https://discuss.airdroper.org/t/dvl-recommendations/10775/2#comparisons-1).

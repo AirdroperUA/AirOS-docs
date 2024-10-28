@@ -1,6 +1,6 @@
 +++
 title = "Advanced Usage"
-description = "BlueOS advanced usage documentation."
+description = "AirOS advanced usage documentation."
 date = 2024-09-26T16:00:00+11:00
 template = "docs/page.html"
 sort_by = "weight"
@@ -11,18 +11,18 @@ draft = false
 lead = ''
 toc = true
 top = false
-link_base = "https://github.com/bluerobotics/BlueOS/tree/1.3/core"
+link_base = "https://github.com/airdroperua/AirOS/tree/1.3/core"
 +++
 
 ## General Information
 
 This documentation page is for detailed information about the services and pages
-in the BlueOS web interface. For a higher level list and direct comparison of
+in the AirOS web interface. For a higher level list and direct comparison of
 features see the [Overview](../overview/#feature-comparison) instead.
 
 ### Pirate Mode
 
-The default BlueOS interface is simplified, and shows only the major tools that
+The default AirOS interface is simplified, and shows only the major tools that
 most people are likely to find useful. Full functionality is available via 
 "Pirate Mode", which can be enabled from the [header bar](#display-mode-management).
 Note that Pirate Mode is advanced/development mode, and should be used with care.
@@ -43,12 +43,12 @@ in) Pirate Mode are shown in [dark mode](#display-mode-management), and describe
 with grey text.
 
 ### Interface Overview
-{{ service(service="blueos-frontend", port=80) }}
+{{ service(service="airos-frontend", port=80) }}
 
-When you first open BlueOS, you'll see a window like the following:
+When you first open AirOS, you'll see a window like the following:
 {{ easy_image(src="interface-overview", width=600) }}
 
-#### Header: Indicators and BlueOS Configuration
+#### Header: Indicators and AirOS Configuration
 
 On the left side of the header there is space for widgets, which can be accessed by
 right clicking and selecting the desired widgets to display. Widgets can be reordered
@@ -87,8 +87,8 @@ It is possible to have multiple connections per interface type.
 {{ service(service="Wifi Manager", port=9000, link="/services/wifi", based=true) }}
 
 - Choose a wifi network to connect to
-   - The BlueOS web interface is accessible via 
-   [http://blueos-wifi.local](http://blueos-wifi.local) when
+   - The AirOS web interface is accessible via 
+   [http://airos-wifi.local](http://airos-wifi.local) when
    connected to the same wifi network as your device (including a mobile phone)
 
 {{ easy_image(src="wifi", width=350, center=true) }}
@@ -97,15 +97,15 @@ It is possible to have multiple connections per interface type.
 
 {{ easy_image(src="wifi-example", width=250, center=true) }}
 
-- Configure or turn on/off the BlueOS wireless hotspot, or display a QR code to
+- Configure or turn on/off the AirOS wireless hotspot, or display a QR code to
 easily connect to it from a phone
-   - The hotspot SSID is named `BlueOS (******)` by default, where the asterisk
+   - The hotspot SSID is named `AirOS (******)` by default, where the asterisk
    field varies for each system
-      - The default password for the hotspot is `blueosap`
-   - The BlueOS web interface is accessible via 
-   [http://blueos-hotspot.local](http://blueos-hotspot.local) and
+      - The default password for the hotspot is `airdroper`
+   - The AirOS web interface is accessible via 
+   [http://airos-hotspot.local](http://airos-hotspot.local) and
    [http://192.168.42.1](http://192.168.42.1) when your device is connected to
-   the BlueOS hotspot network
+   the AirOS hotspot network
 
 {{ easy_image(src="hotspot-example", width=250, center=true) }}
 
@@ -148,7 +148,7 @@ skull-and-crossbones icon
    - CPU throttling
    - CPU under voltage
    - Connected wirelessly (instead of through a tether)
-   - BlueOS cannot connect to its host computer
+   - AirOS cannot connect to its host computer
 
 #### Sidebar
 
@@ -164,14 +164,14 @@ is wide enough, the sidebar automatically stays open.
 specifies the requirements for a service page to appear in the sidebar
 {% end %}
 
-##### BlueOS Settings
+##### AirOS Settings
 
 {{ easy_image(src="settings", width=300, center=true) }}
 
-- Reset BlueOS settings
+- Reset AirOS settings
    - Remove existing camera/endpoint/bridges configuration
-- Remove log files from BlueOS services (to reduce space usage on the SD card)
-- Download log files from BlueOS services to report a problem
+- Remove log files from AirOS services (to reduce space usage on the SD card)
+- Download log files from AirOS services to report a problem
   - Old logs are aggregated and compressed with GZip, and automatically deleted if the space runs out `(New in 1.2)`
 - Re-enable the [configuration wizard](../getting-started#wizard)
 
@@ -186,12 +186,12 @@ specifies the requirements for a service page to appear in the sidebar
    - Reboot onboard computer
 {% simple() %}
 - Soft restart
-   - Do a software-restart of BlueOS (without restarting the computer)
+   - Do a software-restart of AirOS (without restarting the computer)
    - Generally sufficient for most 'reboot' requirements
 {% end %}
 {% pirate() %}
 - Restart core container (same as "Soft restart")
-   - Restart the core BlueOS docker container
+   - Restart the core AirOS docker container
    - Generally sufficient for most 'reboot' requirements
 {% end %}
 
@@ -199,21 +199,21 @@ specifies the requirements for a service page to appear in the sidebar
 
 {{ easy_image(src="feedback", width=300, center=true) }}
 
-Submit feedback about BlueOS via:
-- [Issues on the GitHub repository](https://github.com/bluerobotics/BlueOS/issues)
+Submit feedback about AirOS via:
+- [Issues on the GitHub repository](https://github.com/airdroperua/AirOS/issues)
    - allows easily tracking changes, 
 and notification when complete/fixed
-- Posts on [the Blue Robotics forum](https://discuss.bluerobotics.com)
+- Posts on [the Airdroper forum](https://discuss.airdroper.org)
    - allows easy discussion with the community
 
 ### Dashboard
 The "Dashboard" page provides an overview of the available pages. In future it
 will provide an overview of the vehicle state and main configuration options.
-Click the BlueOS logo to return to the dashboard at any point.
+Click the AirOS logo to return to the dashboard at any point.
 
 {{ simple_pirate_image(src="dashboard", width=600) }}
 
-## BlueOS Service Pages
+## AirOS Service Pages
 Pages are sorted alphabetically.
 
 ### Autopilot Firmware
@@ -251,7 +251,7 @@ autopilot, along with options to:
 
 {% pirate() %}
 Systems with a 
-[Navigator](https://bluerobotics.com/store/comm-control-power/control/navigator/)
+[Navigator](https://airdroper.org/store/comm-control-power/control/navigator/)
 flight controller also have the option to configure serial-compatible ports from
 the onboard computer (including USB ports) as serial ports accessible to the
 autopilot.
@@ -273,7 +273,7 @@ The Autopilot Parameters page allows checking and changing the autopilot's confi
 ### Available Services
 
 The Available Services page provides developer access to the underlying http
-server interfaces of the services upon which BlueOS is based. Each service is
+server interfaces of the services upon which AirOS is based. Each service is
 listed with 
 - the port it is served at
 - a meaningful name
@@ -299,11 +299,11 @@ database used to handle frontend interface changes.
 {% end %}
 {{ easy_image(src="bag-editor", width=600, class="pirate") }}
 
-### BlueOS Version
+### AirOS Version
 
 {{ service(service="Version Chooser", port=8081, link="/services/versionchooser", based=true) }}
 
-The Version Chooser is a major component in the robust backbone of BlueOS. It
+The Version Chooser is a major component in the robust backbone of AirOS. It
 runs independently from the main interface, and is monitored such that if it
 somehow fails a backup version will be run in its place.
 
@@ -320,13 +320,13 @@ versions
 - Allows updating the [bootstrap image](../development/bootstrap) to match the current version
 - Allows loading remote versions (including from custom docker-hub repositories)
 - Allows manually uploading docker images from the surface computer
-- If an undetected failure somehow occurs in BlueOS (or if a broken version gets
+- If an undetected failure somehow occurs in AirOS (or if a broken version gets
 installed) it's possible to easily roll back to a working version from
    - on the device
    - manual upload, or
    - downloaded from the internet
 - If necessary, the underlying service can be accessed directly
-   - e.g. [http://blueos.local:8081](http://blueos.local:8081)
+   - e.g. [http://airos.local:8081](http://airos.local:8081)
 {% end %}
 
 {% pirate() %}
@@ -334,7 +334,7 @@ installed) it's possible to easily roll back to a working version from
 {% end %}
 {{ service(service="File Browser", port=7777, link="https://github.com/filebrowser/filebrowser") }}
 {% pirate() %}
-The File Browser allows viewing, editing, downloading, and uploading BlueOS files.
+The File Browser allows viewing, editing, downloading, and uploading AirOS files.
 {% end %}
 {{ easy_image(src="file-browser", width=600, class="pirate") }}
 {% pirate() %}
@@ -350,7 +350,7 @@ drivers and scripts at `configs/ardupilot/firmware/scripts`. `(New in 1.2)`
    so the filenames use timestamps
 - Can stream logs from external flight controllers (e.g. Pixhawks) if the
 `LOG_BACKEND_TYPE` autopilot parameter is set to `MAVLink`
-   - [May be inconsistent](https://github.com/bluerobotics/BlueOS/issues/457)
+   - [May be inconsistent](https://github.com/airdroperua/AirOS/issues/457)
 
 {{ easy_image(src="log-browser", width=600) }}
 
@@ -371,7 +371,7 @@ endpoints for MAVLink-based services and programs to access.
 {% pirate() %}
 - It is possible to switch from the default MAVLinkRouter to MAVP2P `(New in 1.2)`
    - This may use more CPU, so is only recommended if your system is having frequent "GCS Heartbeat Lost" errors
-- Endpoints intended for internal BlueOS operations are configured to the
+- Endpoints intended for internal AirOS operations are configured to the
 loopback IP `127.0.0.1`
 - Server endpoints for external use are configured to the localhost IP
    - e.g. `0.0.0.0`
@@ -411,7 +411,7 @@ functionality of the `MAVLink2REST` service (access via the
 ### Network Test
 {{ service(service="Pardal", port=9120, link="/services/pardal", based=true) }}
 
-The Local Network Test measures real-time latency between BlueOS and the surface
+The Local Network Test measures real-time latency between AirOS and the surface
 computer, and allows checking the upload and download speeds between them.
 
 A plot is provided of each test, to help diagnose intermittent issues.
@@ -419,7 +419,7 @@ A plot is provided of each test, to help diagnose intermittent issues.
 {{ easy_image(src="network-test-local", width=350) }}
 
 The Internet Speed Test allows measuring the latency and upload and download 
-speeds between BlueOS and its internet connection (if one is available).
+speeds between AirOS and its internet connection (if one is available).
 
 {{ easy_image(src="network-test-internet", width=350) }}
 
@@ -445,7 +445,7 @@ for the component that will send the location data to the vehicle
 
 The Ping Sonar Devices page shows any detected 
 [sonars](@/integrations/hardware/additional/sonars/index.md) from the Ping family,
-including [ethernet-configured Ping360s](https://bluerobotics.com/learn/changing-communications-interface-on-the-ping360/#wiring-connections--ethernet-configuration)
+including [ethernet-configured Ping360s](https://airdroper.org/learn/changing-communications-interface-on-the-ping360/#wiring-connections--ethernet-configuration)
 that are visible on the local network (e.g. via an 
 [Ethernet Switch](@/integrations/hardware/additional/ethernet-switch/index.md)).
 
@@ -493,7 +493,7 @@ For making connections to the autopilot, see [MAVLink Endpoints](#mavlink-endpoi
 {{ service(service="System Information", port=6030) }}
 
 The System Information page provides useful information about the processes,
-network configuration, and computer system BlueOS is running on. It can be
+network configuration, and computer system AirOS is running on. It can be
 useful for troubleshooting, and finding if a particular program is using
 excessive resources.
 {{ easy_image(src="system-info-processes", width=600) }}
@@ -519,7 +519,7 @@ The Terminal provides
    to resize the panels
    - For more advanced tips, check out the
    [tmux cheat sheet website](https://tmuxcheatsheet.com/)
-- Direct access into the core BlueOS docker container
+- Direct access into the core AirOS docker container
 - Ready access to the tmux sessions of the core services (`CTRL+b s`)
    - Useful for seeing logs as they update live
    - Can kill services if necessary
@@ -527,7 +527,7 @@ The Terminal provides
    - Can return to the core container using the `exit` command, or pressing `CTRL+d`
    - Can list available docker images (including extensions) with `docker image list`
    - Can list active docker containers (including extensions) with `docker ps -a`
-   - For BlueOS host computers that do not have the default user as "pi", a custom username
+   - For AirOS host computers that do not have the default user as "pi", a custom username
      can be specified using the `-u` argument (e.g. `red-pill -u myusername`) `(New in 1.2)`
 {% end %}
 {{ easy_image(src="terminal", width=600, class="pirate") }}
@@ -581,19 +581,19 @@ including failsafes, and reverting parameters to their defaults.
 {{ easy_image(src="vehicle-setup-configure-failsafes", width=600) }}
 
 ### Video Streams
-{{ service(service="MAVLink Camera Manager", link="https://github.com/bluerobotics/mavlink-camera-manager/", port=6020) }}
+{{ service(service="MAVLink Camera Manager", link="https://github.com/airdroperua/mavlink-camera-manager/", port=6020) }}
 
-- BlueOS automatically detects H264-encoded video streams
+- AirOS automatically detects H264-encoded video streams
 {% pirate() %}
    - MJPG and YUYV encoded streams are also detected in pirate mode,
    but currently only work when configured as RTSP streams
 {% end %}
 
-- The first time BlueOS starts up it will auto-configure any cameras that are 
+- The first time AirOS starts up it will auto-configure any cameras that are 
 connected at that time, with UDP streams counting up from port `5600`
    - e.g. a second camera at first startup would be streamed to port `5601`
    - Auto-configuration also occurs if the settings are reset
-      - applies to both [global settings resets](#blueos-settings) (via the sidebar) and
+      - applies to both [global settings resets](#airos-settings) (via the sidebar) and
       - camera manager settings resets (via the settings icon in the bottom right)
 - After the initial startup, settings are saved and persistent across reboots
    - Further changes require manually re-configuring streams
@@ -630,7 +630,7 @@ controllable in QGroundControl
    either instead of or as well as recording the base video
 - QGroundControl does not yet support displaying multiple streams simultaneously
    - Additional streams can be processed/viewed/recorded by [the options discussed
-   here](https://discuss.bluerobotics.com/t/how-to-stream-another-cameras-video/9573/3#receiving-the-stream-7)
+   here](https://discuss.airdroper.org/t/how-to-stream-another-cameras-video/9573/3#receiving-the-stream-7)
        - Note that some playback applications (e.g. VLC)  treat odd-numbered ports
        as audio channels, so relevant video streams should only use even-numbered
        ports
@@ -642,7 +642,7 @@ controllable in QGroundControl
       2. reboot the onboard computer to enable
 {% pirate() %}
 - It is possible to use the "Redirect source" element to make an ethernet camera
-available via the BlueOS camera manager, which allows QGroundControl to detect
+available via the AirOS camera manager, which allows QGroundControl to detect
 it automatically (via MAVLink)
 {% end %}
 
@@ -669,7 +669,7 @@ version of the extension to install (or uninstall):
 {{ easy_image(src="extensions-store-example", width=400) }}
 
 By default, the store searches the
-[BlueOS Extensions Repository](https://docs.bluerobotics.com/BlueOS-Extensions-Repository/)
+[AirOS Extensions Repository](https://docs.airdroper.org/AirOS-Extensions-Repository/)
 for available extensions, but it is also possible to specify your own external collections
 of extensions:
 {{ easy_image(src="extensions-store-manifests", width=350) }}
@@ -700,10 +700,10 @@ Developers can install custom extensions as relevant.
 - changing the mDNS hostname changes the address you connect to for the browser interface
     - wired connection (ethernet tether / USB-OTG) -> [http://custom.local](http://custom.local)
     - wifi connection -> [http://custom-wifi.local](http://custom-wifi.local)
-    - BlueOS hotspot -> [http://custom-hotspot.local](http://custom-hotspot.local)
-    - [http://blueos.local](http://blueos.local) will still be available for wired connections,
+    - AirOS hotspot -> [http://custom-hotspot.local](http://custom-hotspot.local)
+    - [http://airos.local](http://airos.local) will still be available for wired connections,
     as a fallback in case the custom name is forgotten
-    - [http://blueos-avahi.local](http://blueos-avahi.local) is broadcast to all interfaces,
+    - [http://airos-avahi.local](http://airos-avahi.local) is broadcast to all interfaces,
     for connecting when you're not sure which interface(s) are available
     - IP addresses are always available for
     [the interfaces they're configured for](#wired-network-management-ethernet-usb-otg), but
@@ -723,7 +723,7 @@ Developers can install custom extensions as relevant.
 
 {% pirate() %}
 ### Theme Styling
-It is possible to customise the styling of the BlueOS interface by adding a
+It is possible to customise the styling of the AirOS interface by adding a
 `theme_style.css` file at `userdata/styles/` in the [File Browser](#file-browser).
 The File Browser can also be used to modify the file, in which case the styles
 are updated at the next page refresh after the file is saved. The save button is
@@ -731,13 +731,13 @@ in the top right corner.
 
 [CSS](https://www.w3schools.com/html/html_css.asp) is commonly used for styling
 HTML webpages, and has an extensive set of features available. For the purposes of
-adjusting the BlueOS theme, the most important thing to understand is
+adjusting the AirOS theme, the most important thing to understand is
 [how to specify colors](https://www.w3schools.com/colors/default.asp). It can be
 helpful to use tools like [colorhexa](https://www.colorhexa.com/5eabed) when
 choosing a palette of colors, including for checking accessibility for various
 color vision deficiencies.
 
-For reference, here is an example with most of the main BlueOS colors changed,
+For reference, here is an example with most of the main AirOS colors changed,
 together with the theme file that created it:
 
 {% end %}

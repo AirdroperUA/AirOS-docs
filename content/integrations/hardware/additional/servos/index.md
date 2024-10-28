@@ -21,7 +21,7 @@ Most autopilots cannot provide power to the servos so a 5V power supply will nee
 
 ## Supported Servos
 
-ArduSub supports either analog or digital PWM controlled servos. The following have been tested:
+ArduPlane, ArduRover, ArduSub supports either analog or digital PWM controlled servos. The following have been tested:
 
-* [Hitec HS-5055MG Servo](https://hitecrcd.com/products/servos/micro-and-mini-servos/digital-micro-and-mini-servos/hs-5055mg-economy-metal-gear-feather-servo/product) (used in the Blue Robotics [Camera Tilt System](https://bluerobotics.com/store/sensors-sonars-cameras/cameras/camera-tilt-mount/))
+* [Hitec HS-5055MG Servo](https://hitecrcd.com/products/servos/micro-and-mini-servos/digital-micro-and-mini-servos/hs-5055mg-economy-metal-gear-feather-servo/product) (used in the Airdroper [Camera Tilt System](https://airdroper.org/store/sensors-sonars-cameras/cameras/camera-tilt-mount/))
 * [Blue Trail Engineering Waterproof Servo SER-110X](https://www.bluetrailengineering.com/product-page/100-m-underwater-servo-with-low-profile-bulkhead-connector)

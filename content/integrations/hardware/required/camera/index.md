@@ -14,19 +14,19 @@ top = false
 
 A valuable aspect of subsea robotics is being able to see underwater and at high pressures for extended periods, which aids navigation, inspections, exploration, and cleaning and repair work. Cameras can be located inside an electronics enclosure, or can be depth-rated and operate on the outside of the vehicle.
 
-BlueOS (on the [Onboard Computer](../onboard-computer/)) includes a camera manager which can configure and stream multiple camera feeds to the [Control Station Computer](../control-computer/), from both USB and ethernet (IP) cameras. QGroundControl can switch between different video streams, but is currently only capable of displaying (and recording) one stream at a time, and only supports H.264-encoded streams. Additional video streams can be viewed in [external applications/software](https://discuss.bluerobotics.com/t/how-to-stream-another-cameras-video/9573/3#receiving-the-stream-7), including VideoLan (VLC) and Open Broadcast Studio (OBS).
+AirOS (on the [Onboard Computer](../onboard-computer/)) includes a camera manager which can configure and stream multiple camera feeds to the [Control Station Computer](../control-computer/), from both USB and ethernet (IP) cameras. QGroundControl can switch between different video streams, but is currently only capable of displaying (and recording) one stream at a time, and only supports H.264-encoded streams. Additional video streams can be viewed in [external applications/software](https://discuss.airdroper.org/t/how-to-stream-another-cameras-video/9573/3#receiving-the-stream-7), including VideoLan (VLC) and Open Broadcast Studio (OBS).
 
 ## Supported Cameras
 
 ### USB Cameras
 
-Most modern USB cameras are compatible with the BlueOS.
+Most modern USB cameras are compatible with the AirOS.
 
 <img src="cam-usb.png" height=120> <img src="exploreHD2.png" height=120>
 
 The following USB cameras have been tested to work:
 
-* [Blue Robotics Low-Light HD USB Camera](https://www.bluerobotics.com/store/electronics/cam-usb-low-light-r1/)
+* [Airdroper Low-Light HD USB Camera](https://www.airdroper.org/store/electronics/cam-usb-low-light-r1/)
 * [DeepWater Exploration exploreHD](https://exploredeepwater.com/products/explorehd-rov-auv-usb-camera) (depth rated)
 
 ### Camera Serial Interface (CSI) Cameras
@@ -50,7 +50,7 @@ An [Ethernet Switch](../../additional/ethernet-switch/) is required unless the c
 
 ## Understanding Camera Properties
 
-Choosing a camera setup for underwater use can be challenging, because a tradeoff must be made between the various properties of the camera, its lens, and the bandwidth required for streaming. If you are mostly interested in camera alternatives and improvements, there's a brief comparison table [here](https://discuss.bluerobotics.com/t/camera-lens-for-br-camera/10993/3#seeing-better-qualityresolution-1) of some options that have been posted about on the Blue Robotics forum.
+Choosing a camera setup for underwater use can be challenging, because a tradeoff must be made between the various properties of the camera, its lens, and the bandwidth required for streaming. If you are mostly interested in camera alternatives and improvements, there's a brief comparison table [here](https://discuss.airdroper.org/t/camera-lens-for-br-camera/10993/3#seeing-better-qualityresolution-1) of some options that have been posted about on the Airdroper forum.
 
 The following points discuss the tradeoffs between different camera properties, with a focus on the underwater environment: 
 
@@ -66,7 +66,7 @@ The following points discuss the tradeoffs between different camera properties, 
 ### Improved Low-Light Performance
 - primarily comes from a larger physical sensor, which can capture more photons
 - better low-light performance means your lights don't need to be as strong, which reduces backscatter and bright reflections off bubbles and particles in the water
-- [this forum comment](https://discuss.bluerobotics.com/t/new-product-bluerov2-full-electronics-and-software-upgrade/10652/4) shows the kind of difference it can make
+- [this forum comment](https://discuss.airdroper.org/t/new-product-bluerov2-full-electronics-and-software-upgrade/10652/4) shows the kind of difference it can make
 ### Wider Angle Lens
 - a wider viewing angle means you can see more of what's around you without needing to turn the camera or vehicle
 - a wider view into the same set of pixels means each pixel covers more area, so there's less fine detail that can be resolved
@@ -80,6 +80,6 @@ The following points discuss the tradeoffs between different camera properties, 
 - encoding removes large amounts of data that may be helpful for processing, so if processing is going to occur it generally has better results if it can be done in real time on the raw image frames from the camera sensor, before they get encoded
 - pre-processing on the camera makes the camera more complex and expensive, and the real-time requirement can place some limitations on what kinds of processing are feasible, and how much processing can be applied
 - if the stream uses the processed results, the time taken to process any single frame is added to the stream latency, and too much display latency makes the vehicle feel unresponsive and harder to control
-- if pre-processing is applied in the camera module to improve visibility/colour (as in the [DWE exploreHD](https://discuss.bluerobotics.com/t/a-new-high-quality-underwater-usb-camera/10279/15)), the video receiver can display better results that are easier to analyse and interpret as they appear
+- if pre-processing is applied in the camera module to improve visibility/colour (as in the [DWE exploreHD](https://discuss.airdroper.org/t/a-new-high-quality-underwater-usb-camera/10279/15)), the video receiver can display better results that are easier to analyse and interpret as they appear
 - some cameras support custom processing, which can be used for visibility improvements but also machine-learning detection of regions or objects of interest
 - custom processing has the benefit that you can choose which processing you want to apply, and people can share results and benefit from each other's developments, but also means you need resources to develop processing that works well for your use-case, and/or access to others who have developed it already

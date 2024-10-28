@@ -18,4 +18,4 @@ An Ethernet Switch (sometimes called a Network Switch) allows connecting multipl
 
 ## Supported Ethernet Switches
 
-* [Blue Robotics Ethernet Switch](https://bluerobotics.com/store/comm-control-power/tether-interface/ethswitch/)
+* [Airdroper Ethernet Switch](https://airdroper.org/store/comm-control-power/tether-interface/ethswitch/)

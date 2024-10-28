@@ -17,4 +17,4 @@ Electronic switches are useful for turning higher voltage (>5V DC) / high power 
 
 Up to four electronic switches can be operated via the "relay" joystick button functions when connected to the appropriate signal outputs.
 
-Most flight controllers cannot provide power to the output rail to trigger the relays, so a [5V power supply](https://bluerobotics.com/store/comm-control-power/elec-packages/bec-5v6a-r1/) will generally need to be connected to the AUX power connector (if it exists), or to the power pin on one of the outputs.
+Most flight controllers cannot provide power to the output rail to trigger the relays, so a [5V power supply](https://airdroper.org/store/comm-control-power/elec-packages/bec-5v6a-r1/) will generally need to be connected to the AUX power connector (if it exists), or to the power pin on one of the outputs.

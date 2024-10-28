@@ -14,7 +14,7 @@ top = false
 
 The Control Station Computer is the operator's primary interface to their vehicle(s). In subsea applications it is often referred to as the Topside Computer or Surface Computer, whereas for rovers and aerial vehicles it is normally called the Ground Control Station (GCS) Computer.
 
-When controlling an ArduSub vehicle, the Topside Computer is tethered to the [Onboard Computer](../onboard-computer/). The vehicle is controlled using Control Station software such as the QGroundControl application, which displays the live video feed and telemetry data to the operator, and accepts piloting inputs from a connected [joystick](../joystick) for manual control.
+When controlling an ArduPlane, ArduRover, ArduSub vehicle, the Topside Computer is tethered to the [Onboard Computer](../onboard-computer/). The vehicle is controlled using Control Station software such as the QGroundControl application, which displays the live video feed and telemetry data to the operator, and accepts piloting inputs from a connected [joystick](../joystick) for manual control.
 
 ## Supported Operating Systems
 
@@ -32,7 +32,7 @@ The minimum recommended hardware for running QGroundControl is:
 
 ### Consumer Level Computers
 
-QGroundControl runs well on consumer level laptops meeting the minimum specifications in the section above. These types of laptops are generally made to be used indoors, so they lack bright screens and water resistance for use outside. If possible, try to find a computer with the brightest screen possible. The engineering department of Blue Robotics uses this [Dell XPS 15 laptop](https://www.dell.com/en-us/shop/dell-laptops/new-xps-15-laptop/spd/xps-15-7590-laptop/XNber5cr656Ps?view=configurations&configurationid=55d274d4-e828-4110-b161-3acaa604d481) as of 2020.
+QGroundControl runs well on consumer level laptops meeting the minimum specifications in the section above. These types of laptops are generally made to be used indoors, so they lack bright screens and water resistance for use outside. If possible, try to find a computer with the brightest screen possible. The engineering department of Airdroper uses this [Dell XPS 15 laptop](https://www.dell.com/en-us/shop/dell-laptops/new-xps-15-laptop/spd/xps-15-7590-laptop/XNber5cr656Ps?view=configurations&configurationid=55d274d4-e828-4110-b161-3acaa604d481) as of 2020.
 
 ### Rugged and Semi-Rugged Computers
 
@@ -44,7 +44,7 @@ If a brighter screen or water resitance are required, then a rugged or semi-rugg
 
 ### Custom Computers
 
-With the introduction of the ArduSub system and compatibility with major operating systems, users are building their own topside computer systems, usually into ruggedized travel cases. A high brightness screen (>1000 nits) is installed in the lid and the computer components are located into the remainder of the case. 
+With the introduction of the ArduPlane, ArduRover, ArduSub system and compatibility with major operating systems, users are building their own topside computer systems, usually into ruggedized travel cases. A high brightness screen (>1000 nits) is installed in the lid and the computer components are located into the remainder of the case. 
 
 Below is an example of such a case from Blue Link:
 
@@ -52,7 +52,7 @@ Below is an example of such a case from Blue Link:
 
 ## Unsupported Operating Systems
 
-Althugh QGroundControl can be downloaded onto these operating systems, ArduSub is not currently supported on:
+Althugh QGroundControl can be downloaded onto these operating systems, ArduPlane, ArduRover, ArduSub is not currently supported on:
 
 * Android
 * iOS

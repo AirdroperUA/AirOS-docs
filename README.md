@@ -1,13 +1,13 @@
 # Overview
 
-This repository documents the Blue Robotics' [BlueOS](https://blueos.cloud) software.
+This repository documents the Airdroper' [AirOS](https://airos.cloud) software.
 
 The documentation is generated using the [Zola](https://www.getzola.org/) static site generator.
 
 ## Structure
 
 - Each branch covers a minor release (`X.y`) of the software, including any patches (`X.Y.z`) of that release
-    - The `latest` branch covers the development state in the BlueOS `master` branch, but is not expected to be consistently up to date
+    - The `latest` branch covers the development state in the AirOS `master` branch, but is not expected to be consistently up to date
     - The `beta` branch covers the latest beta release, and is intended to at least minimally describe all included features
 - For ease of contribution, and to keep the search index independent between versions, each branch is built independently
 - Documentation content is in the `content` directory

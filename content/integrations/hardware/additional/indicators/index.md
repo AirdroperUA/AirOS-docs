@@ -16,4 +16,4 @@ Depth-rated indicator lights can provide visual indications of the status of ele
 
 ## Supported Indicator Lights
 
-* [Blue Robotics Subsea LED Indicator](https://bluerobotics.com/store/thrusters/lights/indicator10-asm-r1/)
+* [Airdroper Subsea LED Indicator](https://airdroper.org/store/thrusters/lights/indicator10-asm-r1/)

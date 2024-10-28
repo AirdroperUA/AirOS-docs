@@ -8,7 +8,7 @@ flowchart TD
                 QCAN -- "yes" --> ACP("Autopilot<br>CAN port<br>(+ArduPilot<br>library)"):::Autopilot
                 QCAN -- "no" --> STP1[Spare<br>tether<br>pair] --> CSC1("Control Station<br>Computer"):::Computer
             QA1 -- "PWM (servo /<br>duty-cycle)" --> APO(Autopilot<br>PWM outputs):::Autopilot
-            QA1 -- "USB<br>serial" ---> OCUSB1["Onboard Computer<br>USB port"] --> BEUIP("BlueOS Extension<br>(USB over IP)"):::BlueOS
+            QA1 -- "USB<br>serial" ---> OCUSB1["Onboard Computer<br>USB port"] --> BEUIP("AirOS Extension<br>(USB over IP)"):::AirOS
             QA1 -- "UART serial /<br>MAVLink" --> ASP("Autopilot serial<br>UART port<br>(+ArduPilot library)"):::Autopilot
     Q1 -- measure the world --> Sensor
         Sensor --> QS1{signal type?}
@@ -18,10 +18,10 @@ flowchart TD
                 QUSB -- "no" --> USC1[USB-serial<br>converter] --> OCUSB2 --> QOC1{used/<br>processed<br>by vehicle?}
                     QOC1 -- "no" --> QOC2{Control<br>Station Computer<br>accepts UDP?}
                         QOC2 -- "no" --> BEUIP
-                        QOC2 -- "yes" --> BB(BlueOS Bridges):::BlueOS
+                        QOC2 -- "yes" --> BB(AirOS Bridges):::AirOS
                     QOC1 -- "yes" --> QOC3{UVC Camera?}
-                        QOC3 -- "yes" -----> BCM(BlueOS<br>Camera Manager):::BlueOS
-                        QOC3 -- "no" ----> BEC2(Custom BlueOS<br>Extension):::BlueOS
+                        QOC3 -- "yes" -----> BCM(AirOS<br>Camera Manager):::AirOS
+                        QOC3 -- "no" ----> BEC2(Custom AirOS<br>Extension):::AirOS
                 QUSB -- "yes" --> STP2[Spare tether pair] --> URC[USB-RS485<br>converter] --> CSC2(Control Station<br>Computer):::Computer
             QS1 -- "I2C" --> AI2C("Autopilot<br>I2C port<br>(+ ArduPilot<br>library)"):::Autopilot
             QS1 -- "binary<br>(ON/OFF)" --> ASD("Autopilot<br>digital input<br>(+ ArduPilot<br>library)"):::Autopilot
@@ -72,7 +72,7 @@ flowchart TD
     class ACP,ASP,AI2C,ASD,AADC Hard;
 
     %% primary integration endpoint
-    classDef BlueOS fill:#339,color:#eee;
+    classDef AirOS fill:#339,color:#eee;
     classDef Autopilot fill:#933,color:#eee;
     classDef Computer fill:#363,color:#eee;
     classDef Other fill:#939,color:#eee;
@@ -86,7 +86,7 @@ flowchart TD
     click BCM "../../usage/advanced/#video-streams"
     click ES "../hardware/additional/ethernet-switch/"
     click TI "../hardware/recommended/tether-interface/"
-    click URC "https://bluerobotics.com/store/comm-control-power/tether-interface/bluart-r1-rp/"
+    click URC "https://airdroper.org/store/comm-control-power/tether-interface/bluart-r1-rp/"
 
     classDef Link color:#0af;
     class ADO,ACP,BB,CSC1,CSC2,BCM,ES,TI,URC Link;

@@ -15,7 +15,7 @@ top = false
 
 Sonars are useful pieces of equipment in situations where visibility is low. Sonars can help get ranges to surfaces or acoustically image targets to better understand their shape.
 
-If you want to learn more, see this [guide to sonar technology and acoustic devices](https://bluerobotics.com/learn/a-smooth-operators-guide-to-underwater-sonars-and-acoustic-devices/).
+If you want to learn more, see this [guide to sonar technology and acoustic devices](https://airdroper.org/learn/a-smooth-operators-guide-to-underwater-sonars-and-acoustic-devices/).
 
 ## Echosounders and Altimeters 
 
@@ -27,21 +27,21 @@ In addition to getting a distance reading, echosounders can provide the full ech
 
 {{ easy_image(src="ping" width=300) }}
 
-* [Blue Robotics Ping Sonar Altimeter and Echosounder](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/) (USB connection to Onboard Computer)
+* [Airdroper Ping Sonar Altimeter and Echosounder](https://airdroper.org/store/sensors-sonars-cameras/sonar/ping-sonar-r2-rp/) (USB connection to Onboard Computer)
 
 ## Scanning Imaging Sonars
 
-Mechanically scanning sonars are useful tools for navigation, and acoustically imaging targets in a top-down 2-dimensional representation. If you are new to scanning sonars, Blue Robotics has written an introductory guide which illustrates the key concepts and can help with image recognition: [Understanding and Using Scanning Sonars](https://bluerobotics.com/learn/understanding-and-using-scanning-sonars/).
+Mechanically scanning sonars are useful tools for navigation, and acoustically imaging targets in a top-down 2-dimensional representation. If you are new to scanning sonars, Airdroper has written an introductory guide which illustrates the key concepts and can help with image recognition: [Understanding and Using Scanning Sonars](https://airdroper.org/learn/understanding-and-using-scanning-sonars/).
 
 ### Supported Scanning Sonars
 
-Only the Blue Robotics Ping360 Scanning Sonar is fully integrated with the ArduSub system and has advanced features such as heading rotation and a direct connection to the Onboard Computer.
+Only the Airdroper Ping360 Scanning Sonar is fully integrated with the ArduPlane, ArduRover, ArduSub system and has advanced features such as heading rotation and a direct connection to the Onboard Computer.
 
 {{ easy_image(src="ping360", width=350) }}
 
-* [Blue Robotics Ping360 Scanning Imaging Sonar](https://bluerobotics.com/store/sensors-sonars-cameras/sonar/ping360-sonar-r1-rp/) ([USB, RS485, or Ethernet](https://bluerobotics.com/learn/changing-communications-interface-on-the-ping360/))
+* [Airdroper Ping360 Scanning Imaging Sonar](https://airdroper.org/store/sensors-sonars-cameras/sonar/ping360-sonar-r1-rp/) ([USB, RS485, or Ethernet](https://airdroper.org/learn/changing-communications-interface-on-the-ping360/))
 
-The following scanning sonars have been installed on ArduSub vehicles:
+The following scanning sonars have been installed on ArduPlane, ArduRover, ArduSub vehicles:
 * [Tritech Micron Sonar](https://www.tritech.co.uk/product/small-rov-mechanical-sector-scanning-sonar-tritech-micron) (RS485 connection through tether)
 * [Imagenex 852 Ultra-Miniature Imaging](https://imagenex.com/products/852-ultra-miniature-imaging) (RS485 connection through tether)
 
@@ -49,8 +49,8 @@ The following scanning sonars have been installed on ArduSub vehicles:
 
 Multibeam imaging sonars are similar to mechanically scanning sonars in that they acoustically image targets in a top-down 2-dimensional representation. However, with multiple sonar beams the refresh rate is much higher presenting a real-time image of what is in front of the vehicle.
 
-The following multibeam sonars have been installed on ArduSub vehicles:
- * [Cerulean Omniscan 450](https://ceruleansonar.com/pages/omniscan-product-page) ForwardScan and SideScan (Ethernet + [BlueOS Extension](https://docs.bluerobotics.com/BlueOS-Extensions-Repository/#:~:text=SonarView,-Maintainer))
+The following multibeam sonars have been installed on ArduPlane, ArduRover, ArduSub vehicles:
+ * [Cerulean Omniscan 450](https://ceruleansonar.com/pages/omniscan-product-page) ForwardScan and SideScan (Ethernet + [AirOS Extension](https://docs.airdroper.org/AirOS-Extensions-Repository/#:~:text=SonarView,-Maintainer))
  * [Blueprint Subsea Oculus Series Multibeam Sonars](https://www.blueprintsubsea.com/oculus/) (Ethernet)
  * [Tritech International Gemini 720im Multibeam Sonar](https://www.tritech.co.uk/product/gemini-720im) (Ethernet or RS485 connection through tether)
  * [Tritech International Gemini 720ik Multibeam Sonar](https://www.tritech.co.uk/product/gemini-720ik) (Ethernet)
@@ -59,6 +59,6 @@ The following multibeam sonars have been installed on ArduSub vehicles:
 
 Profiling sonars are 1-dimensional echosounders with a rotating head that are able to get accurate acoustic range data to create a "profile" of the surrounding environment. These types of sonars are useful for inspecting material buildup in pipes.
 
-The following profiling sonars have been installed on ArduSub vehicles:
+The following profiling sonars have been installed on ArduPlane, ArduRover, ArduSub vehicles:
 * [Imagenex 831L Pipe Profiling Sonar](https://imagenex.com/products/831l-pipe-profiling)
 * [Imagenex 881A Profiling Sonar](https://imagenex.com/products/881a-profiling)

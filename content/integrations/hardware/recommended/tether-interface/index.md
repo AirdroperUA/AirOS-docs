@@ -21,7 +21,7 @@ Interface boards which use the [Homeplug AV](https://en.wikipedia.org/wiki/HomeP
 {{ easy_image(src="fathomx" width=350) }}
 
 The following interface boards are supported:
-* [Blue Robotics Fathom-X Tether Interface Board Set](https://bluerobotics.com/store/comm-control-power/tether-interface/fathom-x-r1/)
+* [Airdroper Fathom-X Tether Interface Board Set](https://airdroper.org/store/comm-control-power/tether-interface/fathom-x-r1/)
 
 ## Interfaces for Fiber Optic Cable
 

@@ -21,7 +21,7 @@ A depth-rated electrical switch allows turning a circuit in an enclosure on and 
 
 ## Supported Electrical Switches
 
-* [Blue Robotics Switch](https://bluerobotics.com/store/comm-control-power/switch/switch-10-5a-r1/)
+* [Airdroper Switch](https://airdroper.org/store/comm-control-power/switch/switch-10-5a-r1/)
 
 ## Other Known Switch Types
 

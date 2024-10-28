@@ -44,7 +44,7 @@ The following control boards have been known to work:
 
 ### Custom Joystick Examples
 
-Below are some examples of custom joysticks created by ArduSub users.
+Below are some examples of custom joysticks created by ArduPlane, ArduRover, ArduSub users.
 
 * [ROVsim Surface Control Unit mk4](http://marinesimulation.com/rovsim-surface-control-unit/)
 

@@ -6,7 +6,7 @@ sort_by = "weight"
 weight = 0
 template = "docs/page.html"
 draft = false
-aliases = ['/blueos/latest/integrations/decision-process']
+aliases = ['/airos/latest/integrations/decision-process']
 
 [extra]
 toc = true
@@ -14,8 +14,8 @@ top = false
 +++
 ## Options
 
-- BlueOS core
-- BlueOS Extension
+- AirOS core
+- AirOS Extension
    - Independent
    - Internal (Jupyter, Node-RED, etc)
    - Add-on (Cockpit widget, etc)

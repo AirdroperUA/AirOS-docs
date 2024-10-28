@@ -9,7 +9,7 @@ flowchart TD
         end
         QEC -- "yes" --> QMN
         QEC -- "no" --> QDI{Is there an<br>existing Docker image<br>for the functionality?}
-            QDI -- "yes" --> CE[Convert to<br>BlueOS Extension]
+            QDI -- "yes" --> CE[Convert to<br>AirOS Extension]
             subgraph DD [Development Device]
                 QHA{"Does it need hardware<br>access on the Raspberry Pi?<br>(USB, serial, I2C)"}
                     QHA -- "no" --> Q4{"Does it need access<br>to data or services on<br>the vehicle?"}
