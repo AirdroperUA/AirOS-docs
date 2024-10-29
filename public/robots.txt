@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://airdroper.org/docs/latest/sitemap.xml
+Sitemap: https://docs.airdroper.org/sitemap.xml
